@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import TodoInput from "./components/Todoinput";
+import TodoInput from "./components/TodoInput"; // Correct case in import statement
 import TodoList from "./components/TodoList";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
   function persistData(newList) {
     localStorage.setItem("todos", JSON.stringify({ todos: newList }));
   }
+
   function handleAddTodos(newTodo) {
     const newTodoList = [...todos, newTodo];
     persistData(newTodoList);
@@ -56,4 +57,5 @@ function App() {
     </>
   );
 }
+
 export default App;
